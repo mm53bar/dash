@@ -1,0 +1,3 @@
+module Dash
+  # Your code goes here...
+end
