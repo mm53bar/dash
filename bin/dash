@@ -1,0 +1,10 @@
+#!/usr/bin/env ruby
+
+begin
+  require 'dash'
+rescue LoadError
+  require 'rubygems'
+  require 'dash'
+end
+
+Dash.hash
