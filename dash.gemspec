@@ -9,8 +9,8 @@ Gem::Specification.new do |s|
   s.authors     = ["Michael McClenaghan"]
   s.email       = ["mike@shift81.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Strong password generator}
+  s.description = %q{Generates a strong password that is simple to recreate so there is no need to ever store your passwords.}
 
   s.rubyforge_project = "dash"
 
