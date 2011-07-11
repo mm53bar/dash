@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Michael McClenaghan"]
   s.email       = ["mike@shift81.com"]
-  s.homepage    = ""
+  s.homepage    = "https://github.com/shift81/dash"
   s.summary     = %q{Strong password generator}
   s.description = %q{Generates a strong password that is simple to recreate so there is no need to ever store your passwords.}
 
