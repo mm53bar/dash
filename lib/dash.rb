@@ -4,7 +4,7 @@ require 'slop'
 module Dash
   extend self
   STRONG = 'ABCDEFGHJKLMNPQRSTUVWabcdefghijkmnopqrstuvw0123456789+/-_*()[]{}'
-  ALPHA =  'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+  WEAK =  'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
   LENGTH = 12
 
   def hash(args)
@@ -24,7 +24,7 @@ module Dash
       on :l, :length, 'Length of generated password', :argument => true
     end
     
-    @charset = opts.weak? ? ALPHA : STRONG
+    @charset = opts.weak? ? WEAK : STRONG
     @length = opts.length? ? opts[:length].to_i : LENGTH
     
     unless password = opts[:password] || ENV['DASH_PASSWORD']
