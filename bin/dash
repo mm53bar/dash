@@ -7,4 +7,4 @@ rescue LoadError
   require 'dash'
 end
 
-Dash.hash(ARGV) rescue puts "Help me out!  Gimme a domain and a password, kinda like `$ dash domain password'"
+Dash.hash(ARGV)
