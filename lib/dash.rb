@@ -1,4 +1,4 @@
-require 'digest/sha1'
+require 'digest/sha2'
 require 'slop'
 
 module Dash
@@ -47,6 +47,6 @@ module Dash
   end
   
   def encrypt(key)
-    Digest::SHA1.hexdigest key
+    Digest::SHA2.new(256).hexdigest key
   end
 end
