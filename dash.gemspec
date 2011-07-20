@@ -21,4 +21,6 @@ Gem::Specification.new do |s|
   
   s.add_dependency('slop', '= 2.0.0')
   s.add_development_dependency "rspec", "~> 2.6"
+  s.add_development_dependency "cucumber"
+  s.add_development_dependency "aruba"
 end
