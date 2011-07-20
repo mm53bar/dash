@@ -20,4 +20,5 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
   
   s.add_dependency('slop', '= 2.0.0')
+  s.add_development_dependency "rspec", "~> 2.6"
 end
