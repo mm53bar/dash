@@ -7,4 +7,4 @@ rescue LoadError
   require 'dash/cli'
 end
 
-Dash::CLI.start
+Dash::CLI.run
