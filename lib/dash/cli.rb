@@ -4,6 +4,21 @@ require 'dash/password'
 module Dash
   class CLI
     def self.run
+      begin
+        password = generate_password
+      rescue  OptionParser::ParseError,
+              OptionParser::InvalidArgument,
+              OptionParser::InvalidOption,
+              OptionParser::MissingArgument
+        puts $!.to_s
+        #puts optparse.to_s
+        exit
+      end      
+      
+      puts password
+    end
+    
+    def self.generate_password
       options = {}
       optparse = OptionParser.new do|opts|
         # Set a banner, displayed at the top
@@ -29,23 +44,16 @@ module Dash
         # This displays the help screen, all programs are
         # assumed to have this option.
         opts.on( '-h', '--help', 'Display this screen' ) do
-          puts opts
+          return opts
           exit
         end
       end      
       
-      begin
-        optparse.parse!        
-      rescue  OptionParser::ParseError,
-              OptionParser::InvalidArgument,
-              OptionParser::InvalidOption,
-              OptionParser::MissingArgument
-        puts $!.to_s
-        puts optparse
-        exit
-      end
+      optparse.parse!    
       
-      puts Dash::Password.generate(ARGV.shift, options[:password], options[:weak], options[:length]) 
+      domain = ARGV.shift
+      return optparse unless domain
+      return Dash::Password.generate(domain, options[:password], options[:weak], options[:length]) 
     end
   end
 end
