@@ -1,13 +1,11 @@
 PATH
   remote: .
   specs:
-    dash (0.3.1)
-      clamp
+    dash (0.4.0)
 
 GEM
   remote: http://rubygems.org/
   specs:
-    clamp (0.2.2)
     diff-lcs (1.1.2)
     rspec (2.6.0)
       rspec-core (~> 2.6.0)
