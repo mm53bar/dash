@@ -3,7 +3,7 @@ require 'dash/password'
 
 module Dash
   class CLI
-    def run
+    def self.run
       options = {}
       optparse = OptionParser.new do|opts|
         # Set a banner, displayed at the top
@@ -34,7 +34,16 @@ module Dash
         end
       end      
       
-      optparse.parse!
+      begin
+        optparse.parse!        
+      rescue  OptionParser::ParseError,
+              OptionParser::InvalidArgument,
+              OptionParser::InvalidOption,
+              OptionParser::MissingArgument
+        puts $!.to_s
+        puts optparse
+        exit
+      end
       
       puts Dash::Password.generate(ARGV.shift, options[:password], options[:weak], options[:length]) 
     end
