@@ -53,7 +53,7 @@ module Dash
       
       domain = ARGV.shift
       return optparse unless domain
-      return Dash::Password.generate(domain, options[:password], options[:weak], options[:length]) 
+      return Dash::Password.generate(domain, options[:password], {:weak => options[:weak], :length => options[:length]}) 
     end
   end
 end
