@@ -6,12 +6,15 @@ module Dash
     WEAK =  'ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
     LENGTH = 12
 
-    def self.generate(domain, password, weak = false, length = LENGTH)
+    def self.generate(domain, password, options={})
+      defaults = { :weak => false, :length => LENGTH }
+      options = defaults.merge(options)
+
       key = encrypt password
       hash = encrypt "#{key}#{domain}"
-      charset = (weak == true) ? WEAK : STRONG
+      charset = (options[:weak] == true) ? WEAK : STRONG
     
-      return encode(hash, charset)[0,length]
+      return encode(hash, charset)[0,options[:length]]
     end
   
     def self.encode(s,c)
