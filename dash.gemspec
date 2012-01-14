@@ -21,4 +21,5 @@ Gem::Specification.new do |s|
   s.require_paths = ["lib"]
 
   s.add_development_dependency('rake', "~> 0.9.2")
+  s.add_development_dependency('simplecov', '~> 0.5.4')
 end
