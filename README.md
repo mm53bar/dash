@@ -1,5 +1,7 @@
 # Dash
 
+[![Build Status](https://secure.travis-ci.org/Shift81/dash.png)](http://travis-ci.org/Shift81/dash)
+
 ## About
 
 Let me guess - you're just using one password for every site. You've read that that's not the smartest way to work but you just can't change. If that's the way you work, why not use a tool that lets you work that way? 
