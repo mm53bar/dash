@@ -28,4 +28,9 @@ class TestPassword < Test::Unit::TestCase
     @same_twitter_password = Dash::Password.generate('twitter.com','password')
     assert_equal @twitter_password, @same_twitter_password
   end
+
+  def test_change_length_with_option
+    @short_twitter_password = Dash::Password.generate('twitter.com','password', :length => 8)
+    assert_equal @short_twitter_password.length, 8
+  end
 end
