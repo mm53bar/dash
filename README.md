@@ -8,7 +8,7 @@ Let me guess - you're just using one password for every site. You've read that t
 
 dash will take your one password and combine it with the domain name to give you a secure password. The next time you need that password, just give dash your password and the domain name to recreate the password. No storage needed!
 
-Like dash? Wish you had it in your browser? Get the dash bookmarklet at [https://github.com/shift81/dash-bookmarklet]
+Like dash? Wish you had it in your browser? Get the dash bookmarklet at https://github.com/shift81/dash-bookmarklet
 
 ## Install
 
